@@ -8,24 +8,35 @@
 
 def main():
     # variables
-    user_num_string = input("Please enter any number: ")
-    user_num_int = 0
+    user_num = input("Please enter any number: ")
     is_not_valid = True
+    num_reversed = ""
+    each_digit = []
 
     # exception handling
     while is_not_valid:
         # tries turning user input from sting to int
         try:
-            user_num_int = int(user_num_string)
+            int(user_num)
 
         # if user num is not an int
         except Exception:
-            print(f"{user_num_string} is not an integer!")
-            user_num_string = input("Please enter any number: ")
+            print(f"{user_num} is not an integer!")
+            user_num = input("Please enter any number: ")
 
-        # if user num is an int
+        # user num is an int
         else:
+            # breaks the loop
             is_not_valid = False
+
+            # putting each digit in a list
+            each_digit = list(user_num)
+
+            # reverses the order of the numbers
+            for counter_two in range(len(each_digit) - 1, -1, -1):
+                print(each_digit[counter_two], end="")
+            print()
+
 
 if __name__ == "__main__":
     main()
