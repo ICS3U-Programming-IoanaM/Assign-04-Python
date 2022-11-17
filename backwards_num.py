@@ -23,6 +23,7 @@ def play_again():
         else:
             print("Input Invalid! Please enter either y or n!")
 
+
 def main():
     # variables
     each_digit = []
@@ -41,7 +42,6 @@ def main():
 
         # user num is an int
         else:
-
             # putting each digit in a list
             each_digit = list(user_num)
 
