@@ -66,6 +66,7 @@ def main():
         if play_again():
             continue
         else:
+            print("Thank you for using this program!")
             break
 
 
